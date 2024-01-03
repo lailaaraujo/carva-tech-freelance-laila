@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #000; /* Fundo preto */
+    color: #fff; /* Cor do texto padrão, ajuste conforme necessário */
+  }
+}
+
+@layer utilities {
+  .text-gradient-biomob-green {
+    background: linear-gradient(to right, #217763, #36b396);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gradient-biomob-green {
+    background: linear-gradient(to right, #217763, #36b396);
+  }
+}
+
+@layer utilities {
+  @media (prefers-color-scheme: dark) {
+    .dark .text-gradient-biomob-green {
+      background: linear-gradient(to right, #f0b900, #ffff00);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .dark .bg-gradient-biomob-green {
+      background: linear-gradient(to right, #f0b900, #ffff00);
+    }
+  }
+}
+
+@layer base {
+  :root {
+    --transition-duration: 0.3s;
+
+    --biomob-green: 162 54% 46%;
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --font: 0 1% 34%;
+    --footer: 0 0% 34%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --biomob-green: 45 100% 50%;
+    --background: 0 0% 10%;
+    --foreground: 210 40% 98%;
+    --font: 0 0% 100%;
+    --footer: 0 0% 10%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 0 0% 15.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 0 0% 22%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer components {
+  .blur-light {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(
+      circle,
+      rgba(153, 101, 204, 0.8) 0%,
+      rgba(0, 0, 0, 0) 70%
+    );
+    pointer-events: none; /* Evita que a luz interfira com os elementos interativos */
+    z-index: -1;
+  }
+}
