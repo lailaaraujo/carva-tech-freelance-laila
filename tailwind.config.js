@@ -14,17 +14,24 @@ module.exports = {
       },
     },
     extend: {
-      // fontFamily: {
-      //   avenirBlack: ["AvenirLTProBlack", "Helvetica", "Arial", "sans-serif"],
-      //   avenirLight: ["AvenirLTProLight", "Helvetica", "Arial", "sans-serif"],
-      //   avenirMedium: ["AvenirLTProMedium", "Helvetica", "Arial", "sans-serif"],
-      //   avenirMediumOblique: [
-      //     "AvenirLTProMediumOblique",
-      //     "Helvetica",
-      //     "Arial",
-      //     "sans-serif",
-      //   ],
-      // },
+      boxShadow: {
+        "custom-blur": "0 0 85px rgba(255, 1, 129, 0.22)",
+      },
+      backgroundColor: {
+        orange: "orange",
+      },
+      fontFamily: {
+        avenirBlack: ["AvenirLTProBlack", "Helvetica", "Arial", "sans-serif"],
+        avenirLight: ["AvenirLTProLight", "Helvetica", "Arial", "sans-serif"],
+        avenirMedium: ["AvenirLTProMedium", "Helvetica", "Arial", "sans-serif"],
+        avenirMediumOblique: [
+          "AvenirLTProMediumOblique",
+          "Helvetica",
+          "Arial",
+          "sans-serif",
+        ],
+        syne: ["Syne", "Helvetica", "Arial", "sans-serif"],
+      },
       colors: {
         biomobGreen: "hsl(var(--biomob-green))",
         font: "hsl(var(--font))",
@@ -33,6 +40,7 @@ module.exports = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
+        testecolor: "hsl(var(--testecolor))",
         //   foreground: "hsl(var(--foreground))",
         //   primary: {
         //     DEFAULT: "hsl(var(--primary))",
@@ -84,5 +92,43 @@ module.exports = {
       // },
     },
   },
+  plugins: [
+    require("@tailwindcss/typography"),
+    function ({ addComponents }) {
+      const newComponents = {
+        ".custom-ball": {
+          position: "relative",
+          height: "45vh",
+          width: "100%",
+          borderRadius: "50%",
+          background: "rgba(255, 1, 129, 0.22)",
+          filter: "blur(85px)",
+        },
+        ".left-ball": {
+          position: "absolute",
+          top: 0,
+          left: 0,
+          height: "45vh",
+          width: "20vw",
+          borderRadius: "50%",
+          background: "rgba(255, 1, 129, 0.22)",
+          filter: "blur(85px)",
+        },
+        ".right-ball": {
+          position: "absolute",
+          top: 0,
+          right: 0,
+          height: "45vh",
+          width: "20vw",
+          borderRadius: "50%",
+          background: "rgba(255, 1, 129, 0.22)",
+          filter: "blur(85px)",
+        },
+      };
+
+      addComponents(newComponents);
+    },
+  ],
+
   // plugins: [require("tailwindcss-animate")],
 };
