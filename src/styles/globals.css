@@ -10,7 +10,6 @@
     color: #fff; /* Cor do texto padrão, ajuste conforme necessário */
   }
 }
-
 @layer utilities {
   .text-gradient-biomob-green {
     background: linear-gradient(to right, #217763, #36b396);
@@ -21,6 +20,17 @@
 
   .bg-gradient-biomob-green {
     background: linear-gradient(to right, #217763, #36b396);
+  }
+
+  .elementor {
+    border-top: var(--divider-border-style) var(--divider-border-width)
+      var(--divider-color);
+    /* Adicione outros estilos conforme necessário */
+    display: flex;
+    margin: 0;
+    direction: ltr;
+    box-sizing: border-box;
+    height: 10px;
   }
 }
 
@@ -77,6 +87,10 @@
     --radius: 0.5rem;
 
     --testecolor: 0 100% 50%;
+
+    --divider-border-width: 100%;
+    --divider-border-style: solid;
+    --divider-color: #3e3e3e;
   }
 
   .dark {
@@ -114,4 +128,27 @@
 }
 
 @layer components {
+  .divider {
+    background-color: var(--divider-color);
+    height: 1px;
+  }
+
+  .section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12rem 0;
+  }
+
+  .paragraphSimple {
+    font-family: sans-serif;
+    font-size: medium;
+    font-weight: normal;
+    line-height: normal;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    opacity: 0.75;
+  }
 }

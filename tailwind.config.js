@@ -8,11 +8,11 @@ module.exports = {
   theme: {
     container: {
       center: true,
-      padding: "2rem",
       screens: {
         "2xl": "1400px",
       },
     },
+
     extend: {
       boxShadow: {
         "custom-blur": "0 0 85px rgba(255, 1, 129, 0.22)",
@@ -90,6 +90,10 @@ module.exports = {
       //   "accordion-down": "accordion-down 0.2s ease-out",
       //   "accordion-up": "accordion-up 0.2s ease-out",
       // },
+      border: {
+        elementor:
+          "var(--divider-border-style) var(--divider-border-width) var(--divider-color)",
+      },
     },
   },
   plugins: [

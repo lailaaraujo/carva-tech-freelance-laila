@@ -10,11 +10,12 @@ import CardResponsiveTest from "@/components/Cards";
 import blackShield from "../../../public/blackShield.png";
 import blackArtef from "../../../public/blackArtef.png";
 import blackCoin from "../../../public/blackCoin.png";
+import Top4WithTopics from "@/components/Top4WithTopics";
 
 export default function HomePage() {
   return (
     <>
-      <main className='flex flex-col justify-center items-center gap-20'>
+      <section className='container flex-col gap-20'>
         <section className='w-full max-w-[92vw] h-full flex flex-col justify-center items-center py-10 '>
           <div className='w-full h-full flex space-x-4 justify-between items-center'>
             <div className='w-auto h-full max-w-[33%] flex items-center text-center'>
@@ -85,7 +86,9 @@ export default function HomePage() {
             paragraph='Explore nossa seleção de produtos com preços tão baixos que desafiam a concorrência. Na capital da economia, trazemos para você ofertas irresistíveis, tornando a alta qualidade acessível a todos os entusiastas de tecnologia.'
           />
         </section>
-      </main>
+
+        <Top4WithTopics />
+      </section>
     </>
   );
 }
