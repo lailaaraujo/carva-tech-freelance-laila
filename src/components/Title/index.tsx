@@ -27,7 +27,7 @@ export const ContentTitle = ({
           : "max-sm:flex-col text-2xl sm:text-4xl mb-6"
       } font-bold`}
     >
-      <span className='text-font'>{firstWord}</span>
+      <span className='text-font '>{firstWord}</span>
       {!flexCol && <span className='max-sm:hidden'>{"\u00A0"}</span>}
       <span
         style={
@@ -36,12 +36,12 @@ export const ContentTitle = ({
             ? { color: customizacaoClient?.corLight }
             : { color: customizacaoClient?.corDark }
         }
-        className={
+        className={`h-full mb-12 ${
           (customizacaoClient && theme !== "dark" && theme !== "system") ||
           (customizacaoClient && theme === "system" && systemTheme !== "dark")
             ? ""
             : "text-gradient-biomob-green font-black"
-        }
+        }`}
       >
         {secondWord}
       </span>

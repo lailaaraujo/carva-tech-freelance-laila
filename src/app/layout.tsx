@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../styles/globals.css";
+import { Header } from "@/components/Header/Header";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -64,6 +65,7 @@ export default function RootLayout({
       lang='pt-BR'
     >
       <body className={poppins.className}>
+        <Header />
         <main
           className='flex flex-col mb-20 gap-[45px] py-[16px]'
           tabIndex={0}
