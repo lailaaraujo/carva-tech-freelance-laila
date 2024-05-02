@@ -5,6 +5,7 @@ module.exports = {
     "./src/app/**/*.{ts,tsx}",
     "./src/**/*.{ts,tsx}",
   ],
+
   theme: {
     container: {
       center: true,
@@ -12,10 +13,23 @@ module.exports = {
         "2xl": "1400px",
       },
     },
+    
 
     extend: {
+        backgroundImage: {
+          'jinx1': "url('/public/jinx1.jpg')",
+        },
+
+        backgroundSize: {
+          'auto': 'auto',
+          'cover': 'cover',
+          'contain': 'contain',
+          '50%': '50%',
+          '16': '4rem',
+        },
+
       boxShadow: {
-        "custom-blur": "0 0 85px rgba(255, 1, 129, 0.22)",
+        "custom-blur": "0 0 85px rgba(0, 0, 255, 0.22)",
       },
       backgroundColor: {
         orange: "orange",
@@ -105,7 +119,7 @@ module.exports = {
           height: "45vh",
           width: "100%",
           borderRadius: "50%",
-          background: "rgba(255, 1, 129, 0.22)",
+          background: "rgba(0, 0, 255, 0.22)",
           filter: "blur(85px)",
         },
         ".left-ball": {
@@ -115,7 +129,7 @@ module.exports = {
           height: "45vh",
           width: "20vw",
           borderRadius: "50%",
-          background: "rgba(255, 1, 129, 0.22)",
+          background: "rgba(0, 0, 255, 0.22)",
           filter: "blur(85px)",
         },
         ".right-ball": {
@@ -125,7 +139,7 @@ module.exports = {
           height: "45vh",
           width: "20vw",
           borderRadius: "50%",
-          background: "rgba(255, 1, 129, 0.22)",
+          background: "rgba(0, 0, 255, 0.22)",
           filter: "blur(85px)",
         },
       };
