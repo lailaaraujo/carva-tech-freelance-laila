@@ -5,19 +5,11 @@
         import main from "../../../public/jinx2.png";
         import TransparentCard from "@/components/TransparentCard";
         import { ContentTitle } from "@/components/Title";
-        import LucideIcon from "@/components/LucideIcon";
-        import CardResponsiveTest from "@/components/Cards";
-        import memoria from "../../../public/memoria.png";
-        import blackArtef from "../../../public/blackArtef.png";
-        import blackCoin from "../../../public/blackCoin.png";
-        import Top4WithTopics from "@/components/Top4WithTopics";
-        import ImageWithText from "@/components/ImageWithText";
         import { Title1, Title3 } from "@/components/Texts";
-        import MiniCard from "@/components/MiniCard";
 
         export default function HomePage() {
           return (
-            <> 
+      
               <section className='container flex flex-col gap-32'>
           <section className='w-full max-w-[92vw] h-full flex flex-col justify-center items-center py-10 '>
             <div className='w-full h-full flex justify-center items-center'>
@@ -51,15 +43,7 @@
             </div>
           </section>
           <section className="bg-[url('/public/jinx1.jpg')] bg-[length:200px_100px]">
-          <div>
-          <Image
-                  src={memoria}
-                  alt='logo principal de boas vindas'
-                  className='w-full h-full max-w-[400px] max-h-[400px]'
-                />
-          </div>
         </section>
         </section>
-            </>
           );
         }

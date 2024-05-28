@@ -16,9 +16,6 @@ module.exports = {
     
 
     extend: {
-        backgroundImage: {
-          'jinx1': "url('/public/jinx1.jpg')",
-        },
 
         backgroundSize: {
           'auto': 'auto',

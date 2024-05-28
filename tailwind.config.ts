@@ -9,10 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-          'jinx1': "url('/public/jinx1.jpg')",
+          "background-carva-tech": "var(--background-carva-tech)",
       },
     },
   },

@@ -1,56 +1,12 @@
-@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  body {
-    background-color: #0d0c10; /* Fundo preto */
-    color: #fff; /* Cor do texto padrão, ajuste conforme necessário */
-  }
-}
-@layer utilities {
-  .text-gradient-biomob-green {
-    background: linear-gradient(to right, #217763, #36b396);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .bg-gradient-biomob-green {
-    background: linear-gradient(to right, #217763, #36b396);
-  }
-
-  .elementor {
-    border-top: var(--divider-border-style) var(--divider-border-width)
-      var(--divider-color);
-    /* Adicione outros estilos conforme necessário */
-    display: flex;
-    margin: 0;
-    direction: ltr;
-    box-sizing: border-box;
-    height: 10px;
-  }
-}
-
-@layer utilities {
-  @media (prefers-color-scheme: dark) {
-    .dark .text-gradient-biomob-green {
-      background: linear-gradient(to right, #f0b900, #ffff00);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .dark .bg-gradient-biomob-green {
-      background: linear-gradient(to right, #f0b900, #ffff00);
-    }
-  }
-}
-
-@layer base {
   :root {
+    --background-carva-tech: url("/carva-tech/capa-carva-tech.png");
+
     --transition-duration: 0.3s;
 
     --biomob-green: 162 54% 46%;
@@ -125,9 +81,6 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
-}
-
-@layer components {
   .divider {
     background-color: var(--divider-color);
     height: 1px;
@@ -150,5 +103,44 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     opacity: 0.75;
+  }
+  
+  body {
+    background-color: #0d0c10; /* Fundo preto */
+    color: #fff; /* Cor do texto padrão, ajuste conforme necessário */
+  }
+  .text-gradient-biomob-green {
+    background: linear-gradient(to right, #217763, #36b396);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .bg-gradient-biomob-green {
+    background: linear-gradient(to right, #217763, #36b396);
+  }
+
+  .elementor {
+    border-top: var(--divider-border-style) var(--divider-border-width)
+      var(--divider-color);
+    /* Adicione outros estilos conforme necessário */
+    display: flex;
+    margin: 0;
+    direction: ltr;
+    box-sizing: border-box;
+    height: 10px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .dark .text-gradient-biomob-green {
+      background: linear-gradient(to right, #f0b900, #ffff00);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .dark .bg-gradient-biomob-green {
+      background: linear-gradient(to right, #f0b900, #ffff00);
+    }
   }
 }

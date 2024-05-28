@@ -1,7 +1,19 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "../styles/globals.css";
-import { Header } from "@/components/Header/Header";
+import { Anek_Bangla, Space_Grotesk } from "next/font/google";
+
+const anekBangla = Anek_Bangla({
+  subsets: ["latin"],
+  variable: "--font-anek-bangla",
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+});
+
+const grotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-space-grotesk",
+  weight: ["500", "700"],
+});
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -17,7 +29,7 @@ const APP_DESCRIPTION = "A sua solução para o seu setup!";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"
+    process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localst.j:3000"
   ),
   applicationName: APP_NAME,
   title: {
@@ -64,8 +76,8 @@ export default function RootLayout({
       suppressHydrationWarning
       lang='pt-BR'
     >
-      <body className={poppins.className}>
-        <Header />
+      <body className={'${anekBangla.variable} ${grotesk.variabele}'}>
+       <Header />
         <main
           className='flex flex-col mb-20 gap-[45px] py-[16px]'
           tabIndex={0}
