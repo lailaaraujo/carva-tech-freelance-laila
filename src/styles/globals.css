@@ -1,4 +1,3 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,6 +5,7 @@
 @layer base {
   :root {
     --background-carva-tech: url("/carva-tech/capa-carva-tech.png");
+    --background-tech: url("/carva-tech/capa2.png");
 
     --transition-duration: 0.3s;
 
@@ -81,6 +81,23 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
   }
+
+  .button {
+    background: linear-gradient(to right, #00b4d8, #001159);
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    transition: background 0.3s ease;
+  }
+  
+  .button:hover {
+    background: linear-gradient(to right, #001159, #00b4d8);
+  }
+  
+
   .divider {
     background-color: var(--divider-color);
     height: 1px;
@@ -106,9 +123,14 @@
   }
   
   body {
-    background-color: #0d0c10; /* Fundo preto */
-    color: #fff; /* Cor do texto padrão, ajuste conforme necessário */
+   background-color: #0d0c10; 
+    color: #fff; 
   }
+  
+  .gradient-background {
+    background: linear-gradient(to bottom, #0d0c10, #160650); 
+    color: #fff; 
+  
   .text-gradient-biomob-green {
     background: linear-gradient(to right, #217763, #36b396);
     -webkit-background-clip: text;
@@ -119,6 +141,7 @@
   .bg-gradient-biomob-green {
     background: linear-gradient(to right, #217763, #36b396);
   }
+  
 
   .elementor {
     border-top: var(--divider-border-style) var(--divider-border-width)
@@ -143,4 +166,5 @@
       background: linear-gradient(to right, #f0b900, #ffff00);
     }
   }
+}
 }

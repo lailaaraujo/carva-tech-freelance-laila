@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Poppins, Anek_Bangla, Space_Grotesk } from "next/font/google";
 import "../styles/globals.css";
-import { Anek_Bangla, Space_Grotesk } from "next/font/google";
+import { Header } from '../components/Header/Header';
+import React from 'react';
+
 
 const anekBangla = Anek_Bangla({
   subsets: ["latin"],
@@ -24,12 +26,12 @@ const poppins = Poppins({
 
 const APP_NAME = "CarvaTech App";
 const APP_DEFAULT_TITLE = "CarvaTech - Soluções Inovadoras";
-const APP_TITLE_TEMPLATE = "%s";
+const APP_TITLE_TEMPLATE = "%s - CarvaTech";
 const APP_DESCRIPTION = "A sua solução para o seu setup!";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localst.j:3000"
+    process.env.NEXT_PUBLIC_FRONTEND_URL || "http://localhost:3000"
   ),
   applicationName: APP_NAME,
   title: {
@@ -72,17 +74,19 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      suppressHydrationWarning
-      lang='pt-BR'
-    >
-      <body className={'${anekBangla.variable} ${grotesk.variabele}'}>
-       <Header />
+    <html suppressHydrationWarning lang="pt-BR">
+      <head>
+        {/* Meta tags e outros elementos head podem ser adicionados aqui */}
+      </head>
+      <body
+        className={`${anekBangla.variable} ${grotesk.variable} ${poppins.variable}`}
+      >
+        <Header />
         <main
-          className='flex flex-col mb-20 gap-[45px] py-[16px]'
+          className="flex flex-col mb-20 gap-[45px] py-[16px]"
           tabIndex={0}
-          id='main-content'
-          aria-label='Você está no conteúdo principal'
+          id="main-content"
+          aria-label="Você está no conteúdo principal"
         >
           {children}
         </main>

@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       backgroundImage: {
           "background-carva-tech": "var(--background-carva-tech)",
+          "background-tech": "var(--background-tech)",
       },
     },
   },

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ItemMenu } from "@/components/ItemMenu/ItemMenu";
+import { ItemMenu } from "../ItemMenu/ItemMenu";
 
 export function Header() {
   return (
@@ -25,10 +25,7 @@ export function Header() {
               </li>
             </ul>
           </div>
-          <button className="relative overflow-hidden text-yellow-300 font-medium py-2 px-4 rounded-md border transition-colors duration-700" style={{ background: 'linear-gradient(to right, #00b4d8, #001159)', borderRadius: '8px' }}>
-                        <span className="absolute inset-0 bg-gradient-to-r from-blue-300 to-white opacity-0 transition-opacity duration-500 hover:opacity-100"></span>
-                        <span className="relative z-10">CONTATO</span>
-            </button>   
+          <button className="button">CONTATO</button>
         </div>
       </div>
     </header>
