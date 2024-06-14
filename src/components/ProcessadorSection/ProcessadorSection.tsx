@@ -12,7 +12,7 @@ const ProcessadorSection = () => {
           height={500}
           className="object-contain lg:h-full"
         />
-        <button className="button">Peça já o seu</button>
+        <button className="button mt-6">Peça já o seu</button>
       </div>
       <div className="lg:w-1/2 p-4 lg:-mr-10">
         <Image

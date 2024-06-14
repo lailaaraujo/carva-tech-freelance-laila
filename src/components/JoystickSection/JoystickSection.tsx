@@ -21,7 +21,7 @@ const JoystickSection = () => {
           height={500}
           className="object-contain lg:h-full"
         />
-        <button className="button">Peça já o seu</button>
+        <button className="button mt-6">Peça já o seu</button>
       </div>
     </section>
   );
