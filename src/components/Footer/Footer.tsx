@@ -18,16 +18,15 @@ export const Footer = () => {
           <a href="https://whatsapp.com" target="_blank" rel="noopener noreferrer" className="bg-[#188FBB] p-2 rounded-full">
             <FaWhatsapp className="text-black" />
           </a>
-          <a href="https://www.instagram.com/carva_tech/" target="_blank" rel="noopener noreferrer" className="bg-[#188FBB] p-2 rounded-full">
+          <a href="https://www.instagram.com/carva_tech/" target="_blank" rel="noopener noreferrer" className="bg-[#188FBB] p-2 rounded-full">  
             <FaInstagram className="text-black" />
           </a>
         </div>
       </div>
       <hr className="border-t border-[#188FBB] my-4" />
-      <div className="text-center">
-        <a href="mailto:your-email@example.com" className="text-xs text-[#FFE3AC]">
-          your-email@example.com
-        </a>
+      <div className="text-center mr-6">
+        <span className="text-xs text-[#FFE3AC]">
+        CARVA TECH GAMER STUDIO </span>
       </div>
     </footer>
   );
