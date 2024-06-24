@@ -4,7 +4,6 @@ import "../styles/globals.css";
 import { Header } from '../components/Header/Header';
 import React from 'react';
 
-
 const anekBangla = Anek_Bangla({
   subsets: ["latin"],
   variable: "--font-anek-bangla",
@@ -79,11 +78,11 @@ export default function RootLayout({
         {/* Meta tags e outros elementos head podem ser adicionados aqui */}
       </head>
       <body
-        className={`${anekBangla.variable} ${grotesk.variable} ${poppins.variable}`}
+        className={`${anekBangla.variable} ${grotesk.variable} ${poppins.variable} min-h-screen flex flex-col`}
       >
         <Header />
         <main
-          className="flex flex-col mb-20 gap-[45px] py-[16px]"
+          className="flex-grow flex flex-col gap-4 md:gap-[45px] md:py-[16px]"
           tabIndex={0}
           id="main-content"
           aria-label="Você está no conteúdo principal"
